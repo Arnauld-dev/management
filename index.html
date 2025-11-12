@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hostel Management System</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span>Arnauld</span>
+        
+            </div>
+            <nav>
+                <ul>
+                    <li class=" menu  active "  data-id="dashboard"><span>Dashboard</span></li>
+                    <li  class="menu"  data-id="students"><span>Students</span></li>
+                    <li   class="menu" data-id="rooms"><span>Rooms</span></li>
+                    <li class=" menu"   data-id="payments"><span>Payments</span></li>
+                    <li   class="menu" data-id="compaints"><span>Complaints</span></li>
+                    <li   class="menu" data-id="staff"><span>Staff</span></li>
+                    <li  class="menu"  data-id="setting"><span>Setting</span></li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+           <header class="top-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <img src="WhatsApp Image 2025-06-03 à 22.17.30_da427ffa.jpg" alt="Admin">
+                    <span>Admin</span>
+                </div>
+            </header>
+
+
+            <div class="tab-content  active" id="dashboard">
+                 <h2>Dashboard OverView</h2>
+                 <div class="stats-container">
+                    <div class="stat-card">
+
+                        <h3>Total Students</h3>
+                        <p id="total-students">0</p>
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3>Occupied Rooms</h3>
+                        <p id="Occupied-rooms">0</p>
+                    </div> 
+                    <div class="stat-card">
+
+                        <h3>Pending Payments</h3>
+                        <p id="pending-payments">0</p>
+                    </div> 
+
+                    <div class="stat-card">
+
+                        <h3>Active Complaints</h3>
+                        <p id="active-complaints">0</p>
+                    </div>  
+
+                    
+                    <div class="recent-activity">
+
+                        <h3>recent Activity</h3>
+                        <div class="activity-list" id="activity-list"></div>
+                    </div> 
+                 </div>
+            </div>
+
+
+
+            <!--Student section-->
+            <div class="tab-content" id="students">
+                <div class="tab-header">
+                    <h2>Student Management</h2>
+                    <button class=" btn btn-primary" id="add-student-btn">+Add student</button>
+                </div>
+                <div class="table-container">
+                    <table id="students-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Room No.</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!--student-->
+                        </tbody>
+                    </table>
+
+                </div>
+                 
+            </div>
+
+            <!--Room section-->
+
+            <div class="tab-content" id="rooms">
+                <div class="tab-header">
+                    <h2>Room  Management</h2>
+                    <button class=" btn btn-primary" id="add-room-btn">+Add Room</button>
+                </div>
+                <div class="table-container">
+                    <table id="rooms-table ">
+                        <thead>
+                            <tr>
+                                <th>Room No.</th>
+                                <th>Type</th>
+                                <th>Capacity</th>
+                                <th>Occupied</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!--Rooms -->
+                        </tbody>
+                    </table>
+
+                </div>
+                 
+            </div>
+
+
+
+             <!--Payments sectiom-->
+
+            <div class="tab-content" id="payments">
+                <div class="tab-header">
+                    <h2>Payments  Management</h2>
+                    <button class=" btn btn-primary" id="add-payments-btn">+Add Payments.</button>
+                </div>
+                <div class="table-container">
+                    <table id="payments-table ">
+                        <thead>
+                            <tr>
+                                <th>Receipt No.</th>
+                                <th>Student</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!--payments -->
+                        </tbody>
+                    </table>
+
+                </div>
+                 
+            </div>
+
+
+        
+
+            <!--Complaints sectiom-->
+
+            <div class="tab-content" id="compaints">
+                <div class="tab-header">
+                    <h2>Complaints Management</h2>
+                    <button class=" btn btn-primary" id="add-complaints-btn">+Add Complaints</button>
+                </div>
+                <div class="table-container">
+                    <table id="Complaints-table ">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Student</th>
+                                <th>Room No.</th>
+                                <th>Issue</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!--Complaints -->
+                        </tbody>
+                    </table>
+
+                </div>
+                 
+            </div>
+
+
+            
+            <!--Staff sectiom-->
+
+              <div class="tab-content" id="staff">
+                <div class="tab-header">
+                    <h2>Staff Management</h2>
+                    <button class=" btn btn-primary" id="add-staff-btn">+Add Staff</button>
+                </div>
+                <div class="table-container">
+                    <table id="staff-table ">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Position </th>
+                                <th>Contact</th>
+                                <th>Shift</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!--Complaints -->
+                        </tbody>
+                    </table>
+
+                </div>
+             </div>
+
+                <!--Setting section-->
+
+                <div class="tab-content" id="setting">
+                    <h2>System Setting</h2>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label for="hostel-name">Hostel Name</label>
+                            <input type="text" id="hostel-name" placeholder="Enter Hostel Name"  >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hostel-address">Hostel Address</label>
+                            <textarea  id="hostel-name" placeholder="Enter Hostel Address"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hostel-contact">Contact Number</label>
+                            <input type="text" id="hostel-contact " placeholder="Enter Contact Number"  >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="room-types">Room Types</label>
+                            <div class="tags-input" id="room-types-container">
+                                
+
+                            </div>
+                                <input type="text" id="room-types-input" placeholder="Add Room Type (e.g,single,double)">
+                        </div>
+                    </div>
+                    <button class="btn-primary" id="save-settings">Save Setting</button>
+                </div>
+                 
+           
+        </main>
+
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
